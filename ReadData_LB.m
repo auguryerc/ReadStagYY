@@ -20,8 +20,8 @@
 
 clear
 
-directory='/Users/coltice/AuguryCloud/Projets/Tristan/AUGURY/';%/Users/coltice/Desktop/Work/Projets/AndrewM/';%'/Users/coltice/Desktop/Work/Projets/STAGVIZ';%'/Users/coltice/Desktop/Work/Projets/Lea/';%'/Users/coltice/Desktop/Work/Projets/Lea/';%'/Users/Nicolas/Work/Research/PROJETS/Plates/PJB2/Temp/';%'/Users/Nicolas/Work/Research/PROJETS/Plates/PJB2/StegmanEarth/';%'/Users/coltice/Desktop/Work/Projets/Lea/FlatSlab/';%'/Users/Nicolas/Work/Research/PROJETS/Plates/PJB2/';%'/Users/coltice/Desktop/Work/Projets/Lea/StegmanEarth';%'/Users/Nicolas/Work/Research/PROJETS/FASTOPT/StagAgewc/';%'/Users/Nicolas/Work/Research/PROJETS/Plates/PJB2/ClaireYS1.5/';%'/Users/Nicolas/Work/Research/PROJETS/FASTOPT/StagAgewc/';%'/Users/Nicolas/Work/Research/PROJETS/FASTOPT/StagAge/';%'/Users/Nicolas/Work/Research/PROJETS/AUGURY/FastOpt/StagRec/';
-fname ='marie-today';%'Free_YS2';%'Inst-30';%'Rec+today';%'E8_wcont_YS2';%'Rec+S_YS2';%'PJB1_YS5_Rh32_Ts06';%'try01';%'E8_YS2rec';%'E8_init';%
+directory='';%
+fname ='';%
 
 %GridType       =   'Cartesian';
 %GridType       =   'Annulus';         
@@ -369,11 +369,11 @@ for fname_number=number_start:incr:number_end
                     Vtheta = VX_3D_1; Vphi = VY_3D_1; Vr = VZ_3D_1;                                 % on Yin grid
                     VX_3D_1 =  Vtheta.*sin(lat).*cos(lon) - Vphi.*sin(lon) + Vr.*cos(lat).*cos(lon);
                     VY_3D_1 =  Vtheta.*sin(lat).*sin(lon) + Vphi.*cos(lon) + Vr.*cos(lat).*sin(lon);
-                    VZ_3D_1 = (VX_3D_1.^2+VY_3D_1.^2).^(1/2)./(VX_3D_1.^2+VY_3D_1.^2+VZ_3D_1.^2).^(1/2) ;%Nicolas le bon c'est ça -Vtheta.*cos(lat)                            + Vr.*sin(lat);
+                    VZ_3D_1 =  -Vtheta.*cos(lat)                            + Vr.*sin(lat);
                     Vtheta = VX_3D_2; Vphi = VY_3D_2; Vr = VZ_3D_2;                                 % on Yang grid
                     VX_3D_2 = -( Vtheta.*sin(lat).*cos(lon) - Vphi.*sin(lon) + Vr.*cos(lat).*cos(lon) );
                     VZ_3D_2 =  Vtheta.*sin(lat).*sin(lon) + Vphi.*cos(lon) + Vr.*cos(lat).*sin(lon);
-                    VY_3D_2 = (VX_3D_2.^2+VY_3D_2.^2).^(1/2)./(VX_3D_2.^2+VY_3D_2.^2+VZ_3D_2.^2).^(1/2) ; %Nicolas le bon c'est ça -Vtheta.*cos(lat)                            + Vr.*sin(lat);
+                    VY_3D_2 =  -Vtheta.*cos(lat)                            + Vr.*sin(lat);
                     
                    
                 end
