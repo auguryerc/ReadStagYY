@@ -9,14 +9,21 @@
 %
 
 
-% PJT edits August 2010:
+% Paul J Tackley edits August 2010:
 % - spherical: move coordinate transform just before writing, otherwise reset
 % - spherical: centre domain around equator, rotate velocity components
 % - YinYang: transform velocity components
 % - new Annulus mode (replaced previous 'Cylindrical' mode)
 
-% TR edits June 2011:
+% Tobias Rolf edits June 2011:
 % - Continents
+%
+% Lea Bello & Nicolas Coltice edits 2014-2016 
+% - Age
+% - Divergence
+% - nrstart --> which layer to start the mapping (from the bottom)
+% - size reduction : nrsave --> take one node every X, for each direction
+
 
 clear
 
@@ -31,7 +38,7 @@ number_start   = 100;
 number_end     = 100;                                                                          
 incr           = 1;
 size_reduction = true; 
-nr_save         = [4 4 1];
+nr_save         = [1 1 1];
 nrstart        = 63 %starting at which depth?
 
 if (size_reduction)
