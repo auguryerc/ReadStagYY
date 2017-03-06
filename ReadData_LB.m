@@ -359,10 +359,7 @@ for fname_number=number_start:incr:number_end
                 Ys1=double(Y_3D_1);
                 Zs1=double(Z_3D_1);
                 Ts1=double(T_3D_1);
-                     
-                
-       %         save('pourlesboys.dat','DAT','-ascii'); %'Y_3D_1','Z_3D_1','T_3D_1',
-        %        save('pourlesboys.dat','-struct','X_3D_2','Y_3D_2','Z_3D_2','T_3D_2','-ascii','-append')
+
                 
                 % Transform velocities, if needed
                 if WriteVelocity
