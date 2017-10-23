@@ -31,13 +31,15 @@
 
 % ...22/10/2013 - added divergence and vorticity projection switches
 
+%... 2017 - small modifications to map fields at a chosen depth (N. Coltice)
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all; tinit = cputime; %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % DECIDE WHICH DATA YOU WANT TO PROCESS
-dir          = '/Users/nicolas/ownCloud/Projets/SSC/Rectibet/';%'/Users/coltice/Desktop/Work/Projets/STAGVIZ';%'/Users/coltice/Desktop/Work/Projets/Predict/RecTibet/';%'/Users/Nicolas/Work/Research/PROJETS/Plates/PJB2/Temp/Claire-YS1.5/';%'/Users/Nicolas/Work/Research/PROJETS/Lea/Plates/PJB2/StegmanEurasia/'; 
-fname        = 'Rectibet';%'Rectibet';%'try10-nowc';%'try40-YS2';%'Inst10-YS1';%'Inst00';%                 % File name stem 
+dir          = '';
+fname        = '';            % File name stem 
 file_stem    = strcat(dir,fname);
 GridType     = 'YinYang';                   % Grid geometry, either YinYang or Annullus
 ncont        = 0;                           % Number of continents
